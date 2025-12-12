@@ -2,12 +2,13 @@
 -- Print the full description of the 'books' table without using DESCRIBE or EXPLAIN
 
 SELECT 
-    COLUMN_NAME AS 'COLUMN',
-    DATA_TYPE AS 'DATA_TYPE',
-    IS_NULLABLE AS 'IS_NULLABLE',
-    COLUMN_KEY AS 'KEY',
-    COLUMN_DEFAULT AS 'DEFAULT',
-    EXTRA AS 'EXTRA'
+    COLUMN_NAME AS 'Field',
+    COLUMN_TYPE AS 'Type',
+    IS_NULLABLE AS 'Null',
+    COLUMN_KEY AS 'Key',
+    COLUMN_DEFAULT AS 'Default',
+    EXTRA AS 'Extra'
 FROM INFORMATION_SCHEMA.COLUMNS
 WHERE TABLE_SCHEMA = 'alx_book_store'
-  AND TABLE_NAME = 'books';
+  AND TABLE_NAME = 'books'
+ORDER BY ORDINAL_POSITION;
