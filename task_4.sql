@@ -1,5 +1,5 @@
 -- task_4.sql
--- Print the full description of the 'books' table without using DESCRIBE or EXPLAIN
+
 
 SELECT 
     COLUMN_NAME AS 'Field',
@@ -11,7 +11,5 @@ SELECT
 FROM INFORMATION_SCHEMA.COLUMNS
 WHERE TABLE_SCHEMA = 'alx_book_store'
   AND TABLE_NAME = 'books'
-ORDER BY ORDINAL_POSITION;
 
--- DESCRIBE books;
--- EXPLAIN books;
+
