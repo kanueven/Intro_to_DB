@@ -1,5 +1,5 @@
 import mysql.connector
-from mysql.connector import Error
+# from mysql.connector import Error
 
 # Define a function that creates a database
 def create_database(): 
@@ -21,7 +21,7 @@ def create_database():
          print("Database 'alx_book_store' created successfully")
          
     # Handle any errors that occur during connection or database creation
-    except Error as e:
+    except mysql.connector.Error as e:
      print("Error while connecting to MySQL", e)
     
     # The 'finally' block runs whether or not an error occurred
